@@ -1,0 +1,20 @@
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+    max-width: 600px;
+    margin-right: 45rem;
+    margin-bottom: 0rem;
+}
+
+.hero-content h1 {
+    font-size: 6rem;
+}
+
+.hero-content h3 {
+    font-size: 1.7rem;
+
+}
+    
