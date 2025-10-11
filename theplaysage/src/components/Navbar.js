@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FaInstagram, FaYoutube, FaTiktok } from 'react-icons/fa';
+import { FaInstagram, FaYoutube, FaFacebook } from 'react-icons/fa';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -92,14 +92,14 @@ const Navbar = () => {
           </li>
         </ul>
         <div className="navbar-social-links">
-          <a href="https://www.instagram.com/theplaysage" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <FaInstagram />
-          </a>
           <a href="https://www.youtube.com/@theplaysage" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
             <FaYoutube />
           </a>
-          <a href="https://www.tiktok.com/@theplaysage" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-            <FaTiktok />
+          <a href="https://www.instagram.com/theplaysage" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <FaInstagram />
+          </a>
+          <a href="https://www.facebook.com/theplaysage" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <FaFacebook />
           </a>
         </div>
       </div>
