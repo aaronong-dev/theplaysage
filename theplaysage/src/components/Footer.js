@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaInstagram, FaYoutube, FaTiktok } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -8,7 +9,15 @@ const Footer = () => {
         <p>Sports. Skills. Reels.</p>
         
         <div className="social-links">
-
+          <a href="https://www.instagram.com/theplaysage" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <FaInstagram />
+          </a>
+          <a href="https://www.youtube.com/@theplaysage" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <FaYoutube />
+          </a>
+          <a href="https://www.tiktok.com/@theplaysage" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <FaTiktok />
+          </a>
         </div>
         
         <div className="footer-bottom">
