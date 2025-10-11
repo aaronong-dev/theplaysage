@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { FaInstagram, FaYoutube, FaTiktok } from 'react-icons/fa';
 import './Navbar.css';
 
@@ -55,8 +56,29 @@ const Navbar = () => {
     }
   };
 
+  // Animation variants for navbar
+  const navbarVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: -100 
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
-    <nav className={`navbar ${isScrolledPastAbout ? 'navbar-solid' : ''}`}>
+    <motion.nav 
+      className={`navbar ${isScrolledPastAbout ? 'navbar-solid' : ''}`}
+      initial="hidden"
+      animate="visible"
+      variants={navbarVariants}
+    >
       <div className="navbar-container">
         <ul className="navbar-links">
           <li>
@@ -81,7 +103,7 @@ const Navbar = () => {
           </a>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 
