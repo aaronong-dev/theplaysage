@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import './Contact.css';
 
@@ -83,12 +84,67 @@ const Contact = () => {
     }
   };
 
+  // Animation variants for the heading
+  const headingVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: -30 
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  // Animation variants for the form container
+  const formContainerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.2
+      }
+    }
+  };
+
+  // Animation variants for form elements
+  const formItemVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: 20 
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
     <section id="contact" className="contact-section">
-      <div className="contact-container">
-        <h2>Come Say Hi!</h2>
-        <form className="contact-form" onSubmit={handleSubmit}>
-          <div className="form-group">
+      <motion.div 
+        className="contact-container"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <motion.h2 variants={headingVariants}>
+          Come Say Hi!
+        </motion.h2>
+        <motion.form 
+          className="contact-form" 
+          onSubmit={handleSubmit}
+          variants={formContainerVariants}
+        >
+          <motion.div className="form-group" variants={formItemVariants}>
             <input
               type="text"
               name="name"
@@ -97,9 +153,9 @@ const Contact = () => {
               onChange={handleChange}
               required
             />
-          </div>
+          </motion.div>
           
-          <div className="form-group">
+          <motion.div className="form-group" variants={formItemVariants}>
             <input
               type="email"
               name="email"
@@ -108,9 +164,9 @@ const Contact = () => {
               onChange={handleChange}
               required
             />
-          </div>
+          </motion.div>
           
-          <div className="form-group">
+          <motion.div className="form-group" variants={formItemVariants}>
             <textarea
               name="message"
               placeholder="Your Message"
@@ -118,23 +174,31 @@ const Contact = () => {
               onChange={handleChange}
               required
             />
-          </div>
+          </motion.div>
           
-          <button 
+          <motion.button 
             type="submit" 
             className="submit-button"
             disabled={isSubmitting}
+            variants={formItemVariants}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
           >
             {isSubmitting ? 'Sending...' : 'Send Message'}
-          </button>
+          </motion.button>
 
           {status.message && (
-            <div className={`status-message ${status.type}`}>
+            <motion.div 
+              className={`status-message ${status.type}`}
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+            >
               {status.message}
-            </div>
+            </motion.div>
           )}
-        </form>
-      </div>
+        </motion.form>
+      </motion.div>
     </section>
   );
 };
