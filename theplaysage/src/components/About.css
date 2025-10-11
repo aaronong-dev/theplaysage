@@ -1,0 +1,132 @@
+.about-page {
+    display: flex;
+    background-color: var(--accent-color);
+    min-height: 90vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 15rem 0rem 0rem 0rem;
+
+}
+
+.about-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+
+.black-line {
+    width: 85px;
+    height: 1px;
+    background-color: black;
+    margin-left: 0rem;
+    margin-top: 0rem;
+}
+
+.about-text {
+    display: flex;
+    text-align: left;
+}
+
+.about-text p{
+    font-size: 1.5rem;
+}
+
+
+.about-video {
+    height: 900px;
+    width: 800px;
+    padding: 0rem;
+}
+
+.about-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.social-cards {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.social-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    min-width: 50px;
+    height: 50px;
+    flex: 1;
+}
+
+.social-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.social-card.youtube {
+    background-color: #FF0000;
+    color: white;
+}
+
+.social-card.instagram {
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    color: white;
+}
+
+.social-card.facebook {
+    background-color: #1877F2;
+    color: white;
+}
+
+.social-card svg {
+    width: 24px;
+    height: 24px;
+}
+
+@media (max-width: 768px) {
+    .about-page {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .about-content {
+        padding: 0rem 1rem 2rem 1rem;
+    }
+    
+    .about-video {
+        flex: none;
+        width: 100%;
+        height: 40vh;
+        margin: 0 auto;
+        padding: 0rem 1rem 2rem 1rem;
+    }
+    
+    .social-cards {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .social-card {
+        min-width: auto;
+        width: 100%;
+    }
+}

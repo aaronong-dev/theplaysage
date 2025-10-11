@@ -3,6 +3,26 @@ import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -11,10 +31,10 @@ const Navbar = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <button onClick={scrollToAbout} className="nav-link-button">About</button>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <button onClick={scrollToContact} className="nav-link-button">Contact</button>
           </li>
         </ul>
       </div>
