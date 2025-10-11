@@ -12,7 +12,7 @@
 .about-content {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 15rem 0rem 0rem 0rem;
+    padding: 15rem 5rem 0rem 5rem;
 
 }
 
@@ -106,10 +106,20 @@
     .about-page {
         flex-direction: column;
         gap: 2rem;
+        min-height: auto;
     }
     
     .about-content {
-        padding: 0rem 1rem 2rem 1rem;
+        padding: 6rem 1.5rem 2rem 1.5rem;
+    }
+
+    .about-header {
+        font-size: 1.2rem;
+    }
+    
+    .about-text p {
+        font-size: 1.2rem;
+        line-height: 1.6;
     }
     
     .about-video {
@@ -121,12 +131,53 @@
     }
     
     .social-cards {
-        flex-direction: column;
         gap: 0.75rem;
+        justify-content: center;
     }
     
     .social-card {
-        min-width: auto;
-        width: 100%;
+        min-width: 60px;
+        flex: 0 1 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-content {
+        padding: 5rem 1rem 2rem 1rem;
+    }
+
+    .about-header {
+        font-size: 1rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .black-line {
+        width: 60px;
+    }
+
+    .about-video {
+        height: 35vh;
+        padding: 0rem 0.5rem 1.5rem 0.5rem;
+    }
+
+    .social-cards {
+        gap: 0.5rem;
+        justify-content: center;
+    }
+
+    .social-card {
+        min-width: 50px;
+        height: 45px;
+        padding: 0.5rem;
+        flex: 0 1 auto;
+    }
+
+    .social-card svg {
+        width: 20px;
+        height: 20px;
     }
 }
