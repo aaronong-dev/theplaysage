@@ -91,8 +91,10 @@ function About() {
             <h1>ABOUT</h1>
             <div className="black-line"></div>
             <div className="about-text">
-              <p> As a PhD student and athlete, I'm here to share my love for sports and skills with the world. Every reel is a chance to show the passion, discipline, and joy that sports bring into our lives.
-                I'll be sharing new highlights and training clips each week.
+              <p> I’m here to share my love for sports and the skills I’ve learned along the way. E
+                very reel is a chance to show the passion, discipline, 
+                and joy that sports bring into our lives. 
+                I’ll be sharing new highlights and training clips each week. 
                 Join me on this journey to stay inspired and keep pushing your own limits.
             </p>
             </div>
