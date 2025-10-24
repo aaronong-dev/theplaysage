@@ -14,7 +14,7 @@ const Contact = () => {
 
   // EmailJS configuration - Replace these with your actual values from EmailJS dashboard
   const EMAILJS_SERVICE_ID = 'service_bfxwfmd';
-  const EMAILJS_TEMPLATE_ID = 'template_vaaml65';
+  const EMAILJS_TEMPLATE_ID = 'template_78co57l';
   const EMAILJS_PUBLIC_KEY = '4tG8WUNNy6chHOp-6';
 
   const handleChange = (e) => {
