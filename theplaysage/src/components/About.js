@@ -91,11 +91,8 @@ function About() {
             <h1>ABOUT</h1>
             <div className="black-line"></div>
             <div className="about-text">
-              <p> I’m here to share my love for sports and the skills I’ve learned along the way. 
-                Every reel is a chance to show the passion, discipline, 
-                and joy that sports bring into our lives. 
-                I’ll be sharing new highlights and training clips each week. 
-                Join me on this journey to stay inspired and keep pushing your own limits.
+              <p> Playsage is where I share my love for sports, mostly soccer, through real gameplay footage and step-by-step tutorials. I’m on the pitch showing you how it’s done, breaking down skills, and helping you play better. 
+                Soccer leads the way, but you might catch me in other sports too. Let’s train, play, and level up together.
             </p>
             </div>
             <motion.div 
