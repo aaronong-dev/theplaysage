@@ -80,6 +80,9 @@ const Navbar = () => {
       variants={navbarVariants}
     >
       <div className="navbar-container">
+        <div className="navbar-logo">
+          <img src="/PlaySageLogo.png" alt="PlaySage Logo" onClick={scrollToTop} />
+        </div>
         <ul className="navbar-links">
           <li>
             <button onClick={scrollToTop} className="nav-link-button">Home</button>
